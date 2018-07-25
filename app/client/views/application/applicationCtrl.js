@@ -14,7 +14,7 @@ angular.module('reg')
       $scope.user = currentUser.data;
 
       // Is the student from MIT?
-      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'mit.edu';
+      $scope.isMitStudent = $scope.user.email.split('@')[1] == 'lnmiit.ac.in';
 
       // If so, default them to adult: true
       if ($scope.isMitStudent){
