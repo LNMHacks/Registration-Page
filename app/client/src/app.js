@@ -1,5 +1,5 @@
 var app = angular.module('reg', [
-  'ui.router','ngRoute'
+  'ui.router'
 ]);
 
 app

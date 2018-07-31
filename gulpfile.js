@@ -30,17 +30,15 @@ gulp.task('js', function () {
         .pipe(concat('app.js'))
         .pipe(ngAnnotate())
         .on('error', swallowError)
-        .pipe(uglify())
-      .pipe(gulp.dest('app/client/build'));
+        .pipe(uglify());
   } else {
     gulp.src(['app/client/src/**/*.js', 'app/client/views/**/*.js'])
       .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(ngAnnotate())
         .on('error', swallowError)
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest('app/client/build'));
-  }
+      .pipe(sourcemaps.write());
+      }
 
 });
 
@@ -48,21 +46,18 @@ gulp.task('sass', function () {
   gulp.src('app/client/stylesheets/site.scss')
     .pipe(sass())
       .on('error', sass.logError)
-    .pipe(minifyCss())
-    .pipe(gulp.dest('app/client/build'));
+    .pipe(minifyCss());
 });
 
 gulp.task('build', ['js', 'sass'], function(){
   // Yup, build the js and sass.
 });
 
-gulp.task('watch', ['js', 'sass'], function () {
+gulp.task('watch', ['js'], function () {
   gulp
     .watch('app/client/src/**/*.js', ['js']);
   gulp
     .watch('app/client/views/**/*.js', ['js']);
-  gulp
-    .watch('app/client/stylesheets/**/*.scss', ['sass']);
 });
 
 gulp.task('server', ['watch'], function(){
