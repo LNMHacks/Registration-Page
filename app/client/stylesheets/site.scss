@@ -5,13 +5,13 @@ $font-header: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
 
 // Login screen variables
 $login-bg-color: $secondary;
-$login-color: $primary;
+$login-color: #3a3737;
 $register-color: $tertiary;
 
 $status-unverified-color: rgb(82, 82, 82);
 $status-incomplete-color: #F5F5F5;
 $status-submitted-color: lighten($secondary, 20%);
-$status-admitted-color: $primary;
+$status-admitted-color: #3a3737;
 $status-confirmed-color: $secondary;
 $status-checkedin-color: $secondary;
 $status-waitlist-color: $tertiary;
@@ -19,7 +19,7 @@ $status-declined-color: $tertiary;
 $status-rejected-color: red; // Not used
 
 // Sidebar variables
-$sidebar-color: $primary;
+$sidebar-color: #3a3737;
 $sidebar-width: 265px;
 $sidebar-transition-time: .5s;
 $sidebar-tab-size: 55px;
@@ -27,7 +27,7 @@ $sidebar-tab-size: 55px;
 // Page variables
 $page-header-color: $secondary;
 
-$brand-primary: $primary;
+$brand-primary: #3a3737;
 $brand-secondary: $secondary;
 $brand-tertiary: $tertiary;
 
@@ -89,12 +89,12 @@ input {
 .ui.button {
   border-radius: 0;
   &.primary {
-    background: $primary;
+    background: #3a3737;
     &:hover {
-      background: lighten($primary, 3%);
+      background: lighten(#3a3737, 3%);
     }
     &:active {
-      background: darken($primary, 3%);
+      background: darken(#3a3737, 3%);
     }
   }
   &.secondary {
