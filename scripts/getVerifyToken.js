@@ -6,7 +6,7 @@ mongoose.connect(database.url);
 
 var User = require('../app/server/models/User');
 
-var email = 'hacker@school.edu';
+var email = '';
 
 User.findOne({
   email: email
